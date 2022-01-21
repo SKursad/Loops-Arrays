@@ -5,6 +5,12 @@
 // ==========================================
 
 const names = ["Henk", "Piet", "Fred", "Joop"];
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i] + "je");
+}
+// const nickName = names.map( names => names + "je");
+// console.log(nickName);
+
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -22,13 +28,26 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // ==========================================
 
 const numbers = [2, 4, 5, 29, 38];
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        numbers[i] = numbers[i] * 2;
+    }
+    if (numbers[i] % 2 !== 0) {
+        numbers[i] = numbers[i] * 3;
+    }
+}
+console.log(numbers);
+// const newNumbers = numbers.map(function(number, index){
+//     return number[i] * (index % 2 === 0 ? 2 : 3);
+// });
+// console.log(newNumbers);
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(numbers) geeft: [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
-// console.log(numbers) geeft: [ 4, 8, 10, 87, 76 ];
-
+// console.log(numbers) geeft: [ 4, 8, 10, 87, 76 ]; <---  fout
+// console.log(numbers) geeft: [ 8, 8, 15, 87, 76 ];
 
 
 
@@ -41,15 +60,24 @@ const numbers = [2, 4, 5, 29, 38];
 // ==========================================
 
 const squares = [30, 2, 8, 24, 11];
+for (let i = 0; i < squares.length; i++) {
+    // const result = squares[i] * squares[i] * squares[i];
+    const result = squares[i] ** 3;
+    squares[i] = "volume van " + squares[i] + " is " + result;
+}
+console.log(squares);
+
+// let result = squares.map(x => x ** 3);
+// console.log(result);
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
-// console.log(squares) geeft: [30, 2, 8, 24, 11];
+// console.log(numbers) geeft: [30, 2, 8, 24, 11];
 // Na jouw script zie je de aangepaste waardes:
-// console.log(squares) geeft: [
+// console.log(numbers) geeft: [
 //   'Het volume van 30 is 27000',
 //   'Het volume van 2 is 8',
 //   'Het volume van 8 is 512',
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
-// ]
+// =============================================
